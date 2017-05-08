@@ -24,4 +24,12 @@ function Application(props) {
   );
 }
 
-ReactDOM.render(<Application title="My Scoreboard" />, document.getElementById('container'));
+Application.propTypes = {
+  title: React.PropTypes.string, // can use .isRequired
+};
+
+Application.defaultProps = {
+  title: 'Scoreboard',
+}
+
+ReactDOM.render(<Application />, document.getElementById('container'));
